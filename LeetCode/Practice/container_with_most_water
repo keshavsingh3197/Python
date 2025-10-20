@@ -1,0 +1,19 @@
+def maxArea(self, height: List[int]) -> int:
+    if not height:
+        return 0
+
+    start, end = 0, len(height)-1
+    answer = 0
+
+    while start < end:
+        h = min(height[start], height[end])
+        area = (end - start) * h
+
+        if area>answer:
+            answer = area
+        if h == height[start]:
+            start+=1
+        else:
+            end-=1
+    
+    return answer
