@@ -1,0 +1,7 @@
+# Operator Overriding is when a operator performs differently with different types of arguements.
+
+def plus(a, b):
+  return a+b
+
+print(plus(14, 72))          # Output: 86
+print(plus("hacktober" + "fest")) # Output: hacktoberfest
